@@ -4,6 +4,9 @@ return {
   build = ':TSUpdate',
   main = 'nvim-treesitter.configs', -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+  config = function()
+    vim.opt.termguicolors = true
+  end,
   opts = {
     ensure_installed = {
       'python',
